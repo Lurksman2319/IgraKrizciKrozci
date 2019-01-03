@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\bin\Debug\IgraKrizciKrozci.exe.config
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\bin\Debug\IgraKrizciKrozci.exe
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\bin\Debug\IgraKrizciKrozci.pdb
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\obj\Debug\IgraKrizciKrozci.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\obj\Debug\IgraKrizciKrozci.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\obj\Debug\IgraKrizciKrozci.exe
+C:\Users\Administrator\source\repos\IgraKrizciKrozci\IgraKrizciKrozci\obj\Debug\IgraKrizciKrozci.pdb

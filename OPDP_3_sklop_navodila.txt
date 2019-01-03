@@ -1,0 +1,229 @@
+1./III - naloga - Delo z dvanajstiškimi števili (12)
+
+Potrebno je implementirati:
+podprogram za pretvorbo iz naravnega v dvanajstiško število (obvezna rekurzivna implementacija!),
+podprogram za pretvorbo iz dvanajstiškega v naravno število (obvezna rekurzivna implementacija!),
+podprogram za izraèun vsote dveh dvanajstiških števil.
+
+Prvi podprogram prejme naravno število in ga pretvori v dvanajstiško število ter ga vrne
+ [v obliki niza znakov].
+
+Drugi podprogram prejme dvanajstiško število [v obliki niza znakov], ga pretvori 
+v naravno število ter ga vrne.
+
+Tretji podprogram prejme dve dvanajstiški števili [dva niza znakov] ter izraèuna in 
+vrne vsoto teh dveh dvanajstiških števil [v obliki niza znakov].
+
+V glavnem programu boste uporabniku ponudili izbiro podprograma, ki naj se izvrši. 
+Poskrbite, da bo uporabnik pri posamezni izbiri vpisal samo tisto, kar izbrani podprogram 
+zahteva (v primeru, da je zahtevan vpis dvanajstiškega števila in uporabnik vpiše kakšen znak, 
+ki mu ne pripada, naj se izpiše napaka - vso preverjanje vnosa naj se izvaja v glavnem programu). 
+Rezultat, ki ga vrne podprogram, v glavnem programu nato izpišite uporabniku.
+
+Opomba: pri 3. podprogramu, si lahko pomagate z uporabo 1. in 2. podprograma.
+Opomba 2: metod, ki samodejno pretvarjajo števila med posameznimi številskimi osnovami, 
+ni dovoljeno uporabiti (npr. Convert.ToInt32()). Lahko jih uporabite samo v primeru, 
+èe jih implementirate sami. 
+
+################################################################################################
+
+2./III - naloga - Morsejeva abeceda (12)
+
+V Morsejevi abecedi so posamezni znaki predstavljeni z zaporedjem znakov "pika" in "èrtica". Preuèite definicije znakov Morsejeve abecede ter izdelajte dva podprograma:
+
+    podprogram: bo prejel niz znakov brez presledkov (samo velike èrke angleške abecede, števke ter loèila (. (pika), , (vejica), ? (vprašaj) in : (dvopièje)), jih zakodiral v Morsejevo abecedo (niz "pik" in "èrtic" ter znak za mejnik med posameznimi znaki, npr. "|") ter ga vrnil,
+    podprogram: bo prejel niz znakov v Morsejevi abecedi brez presledkov vendar z mejniki med posameznimi znaki (npr. "|"), ga pretvoril v niz znakov (velike èrke angleške abecede, števke ter loèila (. (pika), , (vejica), ? (vprašaj) in : (dvopièje)) ter ga vrnil.
+
+Izdelajte tudi testni podprogram, v katerem so implementirani vsi primeri testnih scenarijev iz obrazca.
+
+V glavnem programu uporabniku ponudite izbiro podprograma, ki naj se izvrši ter seveda možnost vnosa niza. Èe uporabnik pri vpisu niza vnese presledke, naj se le-ti preèistijo (pobrišejo) preden klièemo ustrezen podprogram. Èe se med pretvorbo v prvem podprogramu odkrije nedovoljen znak*, se naj v niz doda 8 pik (signalizacija napake (ang. vir)). Èe pri drugem podprogramu naletimo na podniz "pik" in "èrtic" kjer pretvorba ni mogoèa (zaporedje "pik" in "èrtic" se ne more preslikati v katerega izmed dovoljenih znakov), naj se v niz doda zapis "ERROR". Pri signalizaciji napake se pri obeh podprogramih v nizu ohrani vse kar je bilo do tedaj pretvorjenega, izvajanje podprograma pa se takoj zakljuèi z vraèilom niza.
+
+* Opomba: pri prvem podprogramu je nedovoljen znak vse kar ni: velika èrka angleške abecede, števka oz. loèilo (. (pika), , (vejica), ? (vprašaj) in : (dvopièje)). Pri drugem podprogramu je nedovoljen znak vse kar ni: "pika", "èrtica" ali mejnik.
+
+################################################################################################
+
+3./III - naloga - Delo z datumi (15)
+
+Napišite skupino podprogramov za delo z datumi.
+
+Datumi naj bodo predstavljeni kot struktura z loèenimi komponentami za dan, mesec in leto.
+
+Izdelajte:
+
+    podprograma za branje in izpis tako zapisanega datuma,
+    podprogram, ki ugotovi kateri dan v letu je podani datum - številèno na intervalu [1, 366],
+    podprogram, ki podanemu datumu prišteje ali odšteje poljubno celo število dni/mesecev/let,
+    ter podprogram, ki vrne razliko med dvema podanima datumoma, izraženo v dnevih.
+
+Upoštevajte tudi možnost prestopnega leta!
+
+Izdelajte še testni podprogram, s katerim boste prikazali uporabo izdelanih podprogramov ter v 
+katerem bodo predstavljeni vsi testni scenariji iz obrazca.
+
+Uporaba vgrajenih metod C# knjižnic za delo z datumi seveda ni dovoljena.
+
+################################################################################################
+4./III - naloga - Urejevalnik besedil (15)
+
+Izdelajte štiri podprograme, ki bodo (podobno, kot to znajo urejevalniki besedil) znali izpisati na zaslon podani niz znakov levo, desno, sredinsko in obojestransko poravnano. Znakov v podanem nizu je lahko veè kot za eno vrstico. Najveèje možno število znakov v eni vrstici poda uporabnik.
+
+Izdelajte tudi testni podprogram, s katerim boste preverili delovanje izdelanih podprogramov 
+(pomagajte si s testnimi scenariji v obrazcu).
+
+################################################################################################
+
+5./III - naloga - Kalkulator (18)
+
+Izdelajte program za enostaven "kalkulator".
+
+Program naj prebere niz, ki vsebuje do štiri pozitivna števila in do tri operatorje 
+(število1 operator1 število2 ali število1 operator1 število2 operator2 število3 ali število1 
+operator1 število2 operator2 število3 operator3 število4 - primer vhoda: "5 ^ 2 / 3.5 * 4.1"). 
+
+Program naj vpisan niz razbije na posamezna števila in operatorje ter preveri pravilnost vnesenega izraza. Nato izraèuna njegov rezultat ter ga izpiše nazaj uporabniku, pri èemer se upošteva prednost operatorjev (npr. množenje se izvede pred seštevanjem). Èe rezultata zaradi kakršnegakoli razloga (npr. manjka število za operatorjem) ni mogoèe izraèunati, naj se uporabniku izpiše opozorilo. 
+
+Operatorji so lahko: +, -, *, /, ^ (potenca).
+
+Opomba: znak ^ ne boste mogli uporabiti direktno v v C# kodi, ker le-tega prevajalnik smatra 
+kot operator za XOR. Tako da v primeru tega znaka, potenciranje implementirajte sami ali pa si 
+pomagajte z matematièno knjižnico.
+Opomba 2: pri nalogi lahko uporabite Convert.ToInt32() ter Convert.ToDouble().
+
+################################################################################################
+
+9./III - naloga - Igra Križci krožci (18)
+
+Prouèite pravila igre "Križci-krožci" ("Tic-tac-toe" (ang. vir)) ter izdelajte program, 
+ki bo igralcu omogoèil igranje te igre proti inteligentnemu raèunalniku. 
+Pri vsaki igri se nakljuèno izbere kdo bo igral prvi.
+
+Igra se na tabli dimenzije 3x3 polj. Igralec in raèunalnik izmenièno podajata koordinati polja,
+ kamor postavita naslednji križec ali krožec. Po vsaki potezi program posodobi (na novo izriše) 
+igralno tablo. Ko eden izmed njiju doseže "tri v vrsto" (po vrsticah, stolpcih ali diagonalah) 
+se izpiše zmagovalca. V primeru neodloèenega izida se naj izpiše "Neodloèen izid!".
+
+Po koncu vsake igre vprašajte uporabnika, èe želi igrati še eno igro.
+
+Implementirajte dve težavnosti igre (igralec pred vsako igro izbere težavnost, 
+tako da vpiše niz "Lahka" ali pa niz "Inteligentna"):
+- Lahka: raèunalnik na vsaki potezi nakljuèno izbere eno izmed še praznih/prostih polj,
+- Inteligentna: raèunalnik igra igro tako, da nikoli ne izgubi (igra se lahko konèa neodloèeno).
+
+
+Podlaga:
+	-1-|--2--|-3-
+	   |     |
+	   |	 |
+	-4-|--5--|--6-
+	   |	 |
+ 	   | 	 |
+	-7-|--8--|-9-
+ 	   |     |
+	   |     |
+1d array  9 elementov
+for 
+for vars: 
+	- i
+int[] podlaga = new int[9];
+
+is_empty = FALSE;
+
+
+
+Referenca:
+	- https://www.c-sharpcorner.com/UploadFile/75a48f/tic-tac-toe-game-in-C-Sharp/
+	- https://stackoverflow.com/questions/34254661/player-vs-computer-tic-tac-toe-game-code
+################################################################################################
+
+6./III - naloga - Seznam besed (18)
+
+Izdelajte algoritem, ki bo iz tekstovne datoteke prebral* vrstico besedila v katerem so besede loèene s presledki (v besedilu pa se lahko nahajajo tudi števke).
+Èe datoteka ne obstaja, naj se uporabniku ponudi možnost roènega vnosa vrstice besedila. Po vnosu naj se vnesena vrstica (še pred nadaljnjim procesiranjem / obdelavo) tudi shrani* v datoteko. 
+
+Program naj prebrano / vneseno besedilo razbije na posamezne besede ter jih po velikosti izpiše od najmanjše do najveèje v obliki seznama. Pri izpisu naj se morebitna loèila "držijo" svojih besed. Zraven besede izpišite še njeno velikost (loèila, ki se držijo besed, naj se ne štejejo k velikosti besede). Upoštevajte, da je lahko med besedami veè kakor eno loèilo. Èe se neka beseda ponovi dvakrat ali veè, jo izpišite samo enkrat, in to brez loèil.
+
+V primeru, da se zraven besede "drži" število (ena števka ali veè le-teh) oz. èe beseda vsebuje eno ali veè števk oz. èe število stoji samo zase, takšno besedo/število skupaj z morebitnimi loèili izpustite.
+
+Opomba: kot loèilo štejte vsak znak, ki ni slovenska èrka, števka ali presledek. Da je beseda veljavna mora imeti vsaj dve èrki.
+*Opomba 2: uporabniku ponudite možnost vnosa imena datoteke. Dovoljeno je uporabiti razreda StreamReader ter StreamWriter in funkcijo File.Exists().
+
+Primer:
+(opomba: vrstni red izpisa besed je odvisen od notranje implementacije vašega algoritma ter se lahko malenkostno razlikuje od tega primera)
+
+Vhod: !A je 1337 OPDP predmet [ki je predmet prvega letnika] vreden 9ECTS toèk? Tako je!
+Izhod:
+
+je 2
+[ki 2
+OPDP 4
+toèk? 4
+Tako 4
+prvega 6
+vreden 6
+predmet 7
+letnika] 7
+
+################################################################################################
+
+14./III - naloga - Križanka (30)
+
+Izdelajte program, ki bo omogoèal avtomatsko gradnjo križanke. Uporabnik ima možnost vnesti od 3 do 6 gesel ([3,6]) ter opise zanje. Gesla so omejena na dolžino med 2 in 8 znakov ([2,8]). Uporabnik naj tudi vnese glavno geslo, ki bo vkljuèeno v križanko.
+
+Program skrbi za risanje površine križanke (uporabite èrke, zvezdice, pluse, minuse, x-e in podobne znake za èim nazornejši prikaz). Gesla so lahko v križanki izpisana samo v smeri iz leve proti desni ali pa od zgoraj navzdol. Pred geslom se mora nahajati zaporedna številka, ki poveže geslo z njegovim opisom, ki se nahaja na dnu križanke. Za izris celice, kjer se nahaja èrka glavnega gesla, uporabite drugaèno obliko izpisa kot za navadne celice (v glavo celice pri èrki glavnega gesla vkljuèite zaporedno številko znaka, tako da se lahko sestavi konèno geslo). 
+
+Implementacijska navodila/nasveti:
+
+    (opcijsko) za osnovo vašega algoritma lahko izberete idejo v kateri v križanko najprej dodajate besede, ki vsebujejo èim veè èrk glavnega gesla.
+    (opcijsko) križanko najprej sestavite v pomnilniku in jo šele èisto na koncu izrišite. Za enostavnejše risanje lahko uporabite tudi funkcijo knjižnice .NET za izpisovanje znakov v doloèeno vrstico in stolpec okna konzole.
+    èe glavnega gesla ni v konèno sestavljeni križanki, naj se uporabniku izpiše besedilo o napaki (križanke se v tem primeru ne izriše!).
+    èe ima tekom izvajanja algoritem na voljo dve gesli (ali veè le-teh), ki se jih da vkljuèiti v križanko, in lahko v križanko vkljuèi samo eno izmed teh gesel, se za vkljuèitev vedno izbere tisto geslo, ki je najdaljše (v primeru enakih dolžin gesel imate veè možnosti: algoritem med njimi nakljuèno izbere eno; algoritem izbere tisto, ki ima najveè raznolikih èrk ...). Primer: v križanki odkrijemo prosto èrko R, imamo pa na voljo gesli RIŽ in RŽ. Algoritem bo v križanko vstavil geslo RIŽ.
+    èe ostane geslo (gesla), ki vsebuje (vsebujejo) takšne èrke, ki jih v do tedaj zgrajeni križanki ne moremo najti (ali pa se ga/jih ne da vkljuèiti v križanko, ker bi s tem "sekali" kakšno drugo geslo), naj se uporabniku izriše križanka, ki se jo je dalo sestaviti, besede, ki jih ne moremo vstaviti vanjo, pa naj se izpišejo na dnu.
+
+Opomba/Pomoè: ko je algoritem geslo že vkljuèil v križanko, ga veè ne prestavljajte. 
+
+Primer križanke (zamislite si lahko drugaèen izris):
+1. AVTO: vozilo na štiri kolesa za osebno rabo
+2. TOVARNA: stavba za izdelavo izdelkov
+3. ROBOT: terminator je bil v prvem filmu ...
+4. ÈIK: pogovorno cigareta
+
+Glavno geslo: TRAVA.
+
+
+V križanko ni bilo mogoèe vstaviti vstaviti besed(e): ÈIK.
+
+https://docs.microsoft.com/en-us/dotnet/api/system.console.setcursorposition?redirectedfrom=MSDN&view=netframework-4.7.2#System_Console_SetCursorPosition_System_Int32_System_Int32_
+
+##################################################################################################
+
+8./III - naloga - Evidenca zaposlenih (18)
+
+Izdelajte program, ki bo od uporabnika zahteval naslednje podatke najveè 10 zaposlenih:
+
+    delovna številka (tipa: [M | Ž][18-80][0-9][0-9][0-9]) - niz znakov
+    Primer: Ž22879 -> spol = Ž, starost = 22, DelovnoObmocje = 8, TipDela = 7, Pravice = 9,  
+    priimek - niz znakov,
+    ime - niz znakov, 
+    ter delovna doba (interval: [0 - 65]) - celo število.
+
+Naèrtujte ustrezno strukturo podatkov (oz. strukture) za hrambo teh podatkov zaposlenih.
+
+Program naj ob vnosu preverja pravilnost vpisanih podatkov.
+
+Na koncu naj program izpiše ter shrani v tekstovno datoteko*:
+
+1. Podatke najmlajšega zaposlenega (v primeru, da jih je veè, se izpiše in shrani vse, 
+ki si delijo najnižjo starost)
+
+2. Podatke zaposlenega, ki ima najvišjo delovno dobo (v primeru, da jih je veè takih, 
+ki si delijo najvišjo delovno dobo, se med temi izpiše in shrani samo tiste za katere velja, da je številka delovnega obmoèja veèja od 4, da je tip dela nižji od 5 ter da ima zaposleni pravice višje od 5)
+
+3. Celoten seznam zaposlenih (vseh njihovih podatkov), urejen narašèajoèe/padajoèe po (slovenski) 
+abecedi njihovih imen in priimkov. Urejanje izvedite najprej po imenih, v primeru enakih imen, 
+pa še po priimku. Pri urejanju upoštevajte vse èrke imena in priimka (ne samo prve èrke). 
+Program naj pred izpisom in shranjevanjem seznama zaposlenih povpraša uporabnika ali želi
+ narašèajoèi ali padajoèi izpis (dodatno povpraševanje naj se stori samo v primeru, 
+èe je na seznamu veè kot en zaposlen).
+
+*Opomba: uporabniku ponudite možnost vnosa imena datoteke. Dovoljeno je uporabiti 
+razred StreamWriter.
